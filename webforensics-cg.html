@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Web Forensics Best Practices for Online Evidence Acquisition Community Group Charter
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="//www.w3.org/StyleSheets/TR/base">
+    <style>
+      body {
+        max-width: 60em;
+        margin: auto;;
+      }
+      *:target {
+        background-color: yellow;
+      }
+      li {
+        margin-bottom: 9pt;
+      }
+      .note {
+        background-color: yellow;
+        padding: 10px;
+      }
+      .remove {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      [DRAFT] Web Forensics Best Practices for Online Evidence Acquisition Community Group Charter
+    </h1>
+    <p>
+      <span class="remove">This Charter is work in progress. To submit feedback,
+      please use <a href=https://github.com/simoneonofri/webforensics/>GitHub Issues</a>
+      where Charter is being developed.
+    </p>
+    <ul>
+      <li>This Charter: <a href=https://simoneonofri.github.io/webforensics/charter.html>https://simoneonofri.github.io/webforensics/charter.html</a>
+      </li>
+      <li>Previous Charter: <a href=https://simoneonofri.github.io/webforensics/charter.html>https://simoneonofri.github.io/webforensics/charter.html</a>
+      </li>
+      <li>Start Date: <span class="remove">{TBD}</span>
+      </li>
+      <li>Last Modifed: <span class="remove">{TBD}</span>
+      </li>
+    </ul>
+    <h2 id="goals">
+      Goals
+    </h2>
+    <p>The primary goal of this Community Group is to <strong>research and define best practices for Web Forensics and the acquisition of online evidence</strong>. This involves exploring the fundamentals of Digital Forensics and its application to web-based scenarios, covering essential principles, processes, and procedures that ensure <strong>effective evidence handling and reporting</strong>. Our objectives are to:</p>
+    <ul>
+      <li><strong>Describe the scientific nature of Digital Forensics</strong> as it applies to web evidence, including key principles, characteristics, and purposes of digital evidence.  </li>
+      <li><strong>Explain and apply concepts for identifying, collecting, and preserving digital evidence</strong> from web sources in a &quot;forensically sound&quot; manner that maintains its original state.  </li>
+      <li><strong>Document and explain the methodologies, tools, and processes</strong> necessary for collecting, analyzing, and presenting digital evidence from the web in a reliable, repeatable, and admissible way in court.  </li>
+      <li><strong>Address the unique challenges of acquiring volatile web evidence</strong>, such as real-time changes, dynamic content, encryption, and distributed systems, proposing mitigation strategies.  </li>
+      <li><strong>Investigate methods for acquiring social media profiles without user credentials</strong>, acknowledging the security measures, privacy controls, and technical/legal barriers involved.  </li>
+      <li><strong>Develop guidelines for robust data preservation and data integrity</strong> in Web Forensics, which are fundamental for maintaining authenticity, reliability, and legal admissibility of digital evidence.  </li>
+      <li><strong>Outline the importance of comprehensive forensic reports</strong> for documenting acquired evidence, explaining methodologies, and ensuring clarity for legal professionals and non-experts.  </li>
+      <li><strong>Provide guidance on setting up and configuring effective acquisition environments</strong> for Web Forensics, including the use of operating systems, web browsers, and network settings.</li>
+    </ul>
+    <h2 id="scope-of-work">
+      Scope of Work
+    </h2>
+    <p>The scope of this group&#39;s work will encompass the following areas related to web forensics and online evidence acquisition:</p>
+    <ul>
+      <li><strong>Digital Forensics Process Model (DFPM) adaptation for web evidence</strong>: Researching and detailing the application of the DFPM stages (Preparation, Gathering/Acquisition, Processing/Examination, Presentation/Reporting) specifically to web-based investigations.  </li>
+      <li><strong>Web Evidence Characteristics</strong>: Defining web evidence and its unique properties, such as its dynamic and volatile nature, and the challenges this poses for acquisition and integrity.  </li>
+      <li><strong>Specific Web Acquisition Sources</strong>: Investigating methodologies and best practices for acquiring evidence from diverse online sources, including:  <ul>
+      <li><strong>Websites</strong>: Capturing and preserving content, metadata, HTML source code, network traffic, screenshots, pageshots, and video recordings. This includes static, dynamic, and ephemeral content.  </li>
+      <li><strong>Email, Web Messaging, Social Networks</strong>: Techniques for collecting user activity, metadata, multimedia content, and message logs, while navigating challenges like encryption, privacy settings, and APIs.  </li>
+      <li><strong>P2P-Torrent, Cloud Storage, Tor/DarkWeb, Metaverse</strong>: Specialized approaches for decentralized networks, remote storage, anonymized environments, and virtual worlds, addressing their unique properties and particularities.  </li>
+      <li><strong>Browser Forensics</strong>: Examining web browser profiles and their components (bookmarks, history, cookies, extensions, preferences, autofill, local storage) as sources of user activity and evidence. This also includes analysis of <code>blob_storage</code>, cache, DevTools, and configuration URLs for forensic insights.  </li>
+      <li><strong>Acquisition Tools and Techniques</strong>: Evaluating and recommending various tools and techniques for web evidence acquisition, such as browser extensions, utilities (APIs, curl, wget), purpose-built web forensic software, network traffic capture tools (Wireshark, tcpdump), and video recording tools.  </li>
+      <li><strong>Evidence Integrity and Verification</strong>: Researching and promoting the use of cryptographic hashing (MD5, SHA-256, SHA-1, SHA-3) to ensure data integrity and authenticity, as well as the importance of timestamps and Chain of Custody documentation.  </li>
+      <li><strong>Acquisition Environment Setup</strong>: Best practices for configuring a robust and controlled acquisition environment using virtualization technologies (Virtual Machines, Containers, SaaS), considering operating system choices (Windows, Linux, MacOSX).  </li>
+      <li><strong>Addressing Acquisition Challenges</strong>: Developing strategies and proposing solutions for overcoming complex web content acquisition issues, including dynamic content, anti-scraping measures, and interactive elements requiring operator intervention.  </li>
+      <li><strong>Integration of Acquisition Methods</strong>: Investigating the benefits of integrating different acquisition methods, such as combining video recording and network traffic capture, for a more comprehensive view of web activities.</li>
+    </ul>
+    <h3 id="out-of-scope">
+      Out of Scope
+    </h3>
+    <p>While related to digital forensics, the following areas are generally considered out of scope for this Community Group, unless directly relevant to the acquisition and analysis of <em>online</em> web-based evidence:</p>
+    <ul>
+      <li><strong>Non-web specific Digital Forensics</strong>: Detailed methodologies for other types of digital forensics, such as standalone computer forensics (hard drives, file systems, operating systems), malware forensics (analysis of malicious software not hosted on the web), mobile device forensics, memory forensics, cloud storage forensics (beyond web-based services), network forensics (beyond web traffic), and blockchain forensics, unless they directly provide artifacts or context for web-related investigations.  </li>
+      <li><strong>Physical Forensics</strong>: Investigations involving physical objects or scenes that do not have a digital web component.  </li>
+      <li><strong>General IT Security Operations</strong>: Activities like general network security, system administration, and penetration testing that are not performed for forensic evidence collection or investigation purposes.  </li>
+      <li><strong>Legal Processes (beyond evidence admissibility)</strong>: While legal admissibility and compliance are crucial for forensic reports, the group will not delve into the specifics of legal proceedings or court rules beyond what is necessary for evidence handling and reporting.  </li>
+      <li><strong>Development of new forensic tools</strong>: While the group may recommend types of tools or features, the direct development of new web forensic software or hardware is not a primary objective.</li>
+    </ul>
+    <h2 id="deliverables">
+      Deliverables
+    </h2>
+    <h3 id="specifications">
+      Specifications
+    </h3>
+    <p>The primary deliverables of this Community Group will be a series of <strong>comprehensive and understandable reports and guidelines</strong> that detail best practices for web forensics and online evidence acquisition. These will be structured to serve as valuable resources for forensic professionals, legal teams, and other stakeholders. Specific deliverables include:</p>
+    <ul>
+      <li><strong>Best Practice Guidelines for Online Evidence Acquisition</strong>: Detailed documents outlining proper identification, collection, acquisition, and preservation methodologies for various web evidence types, aligned with international standards like ISO/IEC 27037:2012.  </li>
+      <li><strong>Standardized Web Forensic Report Template</strong>: A template for forensic reports that includes essential components such as case background, objectives, key findings, conclusions, recommendations, and a technical appendix. This template will emphasize accuracy, clarity, comprehensive detail, objectivity, confidentiality, chain of custody documentation, reproducibility, and legal compliance.  </li>
+      <li><strong>Methodologies for Volatile Web Evidence Capture</strong>: Reports detailing strategies and technical approaches for capturing dynamic, real-time, and encrypted web content, including the use of advanced tools and comprehensive logging.  </li>
+      <li><strong>Guidelines for Social Media Evidence Acquisition</strong>: Documents addressing the complexities of acquiring evidence from social media platforms, including legal processes, collaboration with platforms, and OSINT techniques.  </li>
+      <li><strong>Recommendations for Forensic Acquisition Environments</strong>: Detailed guidance on setting up and validating secure and isolated environments using VMs, containers, and SaaS solutions, including considerations for operating systems and network configurations (VPNs, proxies, Tor).  </li>
+      <li><strong>Artifact Analysis Guides</strong>: Documentation on extracting and interpreting web browser artifacts (history, cache, cookies, profiles, extensions) and other web-related data (Whois records, SSL certificates, robots.txt).  </li>
+      <li><strong>Case Manager Best Practices</strong>: Guidelines on leveraging case management tools for organizing, tracking, and reporting forensic investigations, ensuring workflow efficiency and compliance.</li>
+    </ul>
+    <h3 id="non-normative-reports">
+      Non-Normative Reports
+    </h3>
+    <p>The group may produce other Community Group Reports within the scope of this charter but that are not Specifications, for instance use cases, requirements, or white papers.</p>
+    <h3 id="test-suites">
+      Test Suites and Other Software
+    </h3>
+    <p>While the group will not develop new software, it will identify and recommend existing and conceptual tools and techniques that support best practices in web forensics.</p>
+    <p>The group will recommend and possibly develop criteria for <strong>forensic tool validation</strong> and <strong>software integrity checks</strong></p>
+    <p>The group MAY produce test suites to support the Specifications. Please see the GitHub LICENSE file for test suite contribution licensing information.</p>
+    <h2 id="liaisons">
+      Dependencies or Liaisons
+    </h2>
+    <p class="remove">
+      {TBD: List any significant dependencies on other groups (inside or
+      outside W3C) or materials. }
+    </p>
+    <h2 id="process">
+      Community and Business Group Process
+    </h2>
+    <p>
+      The group operates under the <a href=
+      "https://www.w3.org/community/about/process/">Community and Business
+      Group Process</a>. Terms in this Charter that conflict with those of the
+      Community and Business Group Process are void.
+    </p>
+    <p>
+      As with other Community Groups, W3C seeks organizational licensing
+      commitments under the <a href=
+      'https://www.w3.org/community/about/process/cla/'>W3C Community
+      Contributor License Agreement (CLA)</a>. When people request to
+      participate without representing their organization's legal interests,
+      W3C will in general approve those requests for this group with the
+      following understanding: W3C will seek and expect an organizational
+      commitment under the CLA starting with the individual's first request to
+      make a contribution to a group <a href="#deliverables">Deliverable</a>.
+      The section on <a href="#contrib">Contribution Mechanics</a> describes
+      how W3C expects to monitor these contribution requests.
+    </p>
+
+    <p>
+      The <a href="https://www.w3.org/Consortium/cepc/">W3C Code of
+      Ethics and Professional Conduct</a> applies to participation in
+      this group.
+    </p>
+
+    <h2 id="worklimit">
+      Work Limited to Charter Scope
+    </h2>
+    <p>
+      The group will not publish Specifications on topics other than those
+      listed under <a href="#specifications">Specifications</a> above. See
+      below for <a href="#charter-change">how to modify the charter</a>.
+    </p>
+    <h2 id="contrib">
+      Contribution Mechanics
+    </h2>
+    <p>
+      Substantive Contributions to Specifications can only be made by Community
+      Group Participants who have agreed to the <a href=
+      "https://www.w3.org/community/about/process/cla/">W3C Community
+      Contributor License Agreement (CLA)</a>.
+    </p>
+    <p>
+      Specifications created in the Community Group must use the <a href=
+      "http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">
+      W3C Software and Document License</a>. All other documents produced by
+      the group should use that License where possible.
+    </p>
+    <p class="remove">
+      {TBD: if CG doesn't use GitHub replace the remaining paragraphs in this
+      section with: "All Contributions are made on the groups public mail list
+      or public contrib list"}
+    </p>
+    <p>
+      Community Group participants agree to make all contributions in the
+      GitHub repo the group is using for the particular document. This may be
+      in the form of a pull request (preferred), by raising an issue, or by
+      adding a comment to an existing issue.
+    </p>
+    <p id="githublicense">
+      All Github repositories attached to the Community Group must contain a
+      copy of the <a href=
+      "https://github.com/w3c/licenses/blob/master/CG-CONTRIBUTING.md">CONTRIBUTING</a>
+      and <a href=
+      "https://github.com/w3c/licenses/blob/master/CG-LICENSE.md">LICENSE</a>
+      files.
+    </p>
+    <h2 id="transparency">
+      Transparency
+    </h2>
+    <p>
+      The group will conduct all of its technical work in public. If the group
+      uses GitHub, all technical work will occur in its GitHub repositories
+      (and not in mailing list discussions). This is to ensure contributions
+      can be tracked through a software tool.
+    </p>
+    <p>
+      Meetings may be restricted to Community Group participants, but a public
+      summary or minutes must be posted to the group's public mailing list, or
+      to a GitHub issue if the group uses GitHub.
+    </p>
+    <h2 id="decision">
+      Decision Process
+    </h2>
+    <p class="remove">
+      If the decision policy is documented somewhere, update this section accordingly to link to it.
+    </p>
+    <p>
+      This group will seek to make decisions where there is consensus. Groups
+      are free to decide how to make decisions (e.g. Participants who have
+      earned Committer status for a history of useful contributions assess
+      consensus, or the Chair assesses consensus, or where consensus isn't
+      clear there is a Call for Consensus [CfC] to allow multi-day online
+      feedback for a proposed course of action). It is expected that
+      participants can earn Committer status through a history of valuable
+      contributions as is common in open source projects. After discussion and
+      due consideration of different opinions, a decision should be publicly
+      recorded (where GitHub is used as the resolution of an Issue).
+    </p>
+    <p>
+      If substantial disagreement remains (e.g. the group is divided) and the
+      group needs to decide an Issue in order to continue to make progress, the
+      Committers will choose an alternative that had substantial support (with
+      a vote of Committers if necessary). Individuals who disagree with the
+      choice are strongly encouraged to take ownership of their objection by
+      taking ownership of an alternative fork. This is explicitly allowed (and
+      preferred to blocking progress) with a goal of letting implementation
+      experience inform which spec is ultimately chosen by the group to move
+      ahead with.
+    </p>
+    <p>
+      Any decisions reached at any meeting are tentative and should be recorded
+      in a GitHub Issue for groups that use GitHub and otherwise on the group's
+      public mail list. Any group participant may object to a decision reached
+      at an online or in-person meeting within 7 days of publication of the
+      decision provided that they include clear technical reasons for their
+      objection. The Chairs will facilitate discussion to try to resolve the
+      objection according to this decision process.
+    </p>
+    <p>
+      It is the Chairs' responsibility to ensure that the decision process is
+      fair, respects the consensus of the CG, and does not unreasonably favour
+      or discriminate against any group participant or their employer.
+    </p>
+    <h2 id="chairs">
+      Chair Selection
+    </h2>
+    <p>
+      Participants in this group choose their Chair(s) and can replace their
+      Chair(s) at any time using whatever means they prefer. However, if 5
+      participants, no two from the same organisation, call for an election,
+      the group must use the following process to replace any current Chair(s)
+      with a new Chair, consulting the Community Development Lead on election
+      operations (e.g., voting infrastructure and using <a href=
+      "https://tools.ietf.org/html/rfc2777">RFC 2777</a>).
+    </p>
+    <ol>
+      <li>Participants announce their candidacies. Participants have 14 days to
+      announce their candidacies, but this period ends as soon as all
+      participants have announced their intentions. If there is only one
+      candidate, that person becomes the Chair. If there are two or more
+      candidates, there is a vote. Otherwise, nothing changes.
+      </li>
+      <li>Participants vote. Participants have 21 days to vote for a single
+      candidate, but this period ends as soon as all participants have voted.
+      The individual who receives the most votes, no two from the same
+      organisation, is elected chair. In case of a tie, RFC2777 is used to
+      break the tie. An elected Chair may appoint co-Chairs.
+      </li>
+    </ol>
+    <p>
+      Participants dissatisfied with the outcome of an election may ask the
+      Community Development Lead to intervene. The Community Development Lead,
+      after evaluating the election, may take any action including no action.
+    </p>
+    <h2 id="charter-change">
+      Amendments to this Charter
+    </h2>
+    <p>
+      The group can decide to work on a proposed amended charter, editing the
+      text using the <a href="#decision">Decision Process</a> described above.
+      The decision on whether to adopt the amended charter is made by
+      conducting a 30-day vote on the proposed new charter. The new charter, if
+      approved, takes effect on either the proposed date in the charter itself,
+      or 7 days after the result of the election is announced, whichever is
+      later. A new charter must receive 2/3 of the votes cast in the approval
+      vote to pass. The group may make simple corrections to the charter such
+      as deliverable dates by the simpler group decision process rather than
+      this charter amendment process. The group will use the amendment process
+      for any substantive changes to the goals, scope, deliverables, decision
+      process or rules for amending the charter.
+    </p>
+  </body>
+</html>
